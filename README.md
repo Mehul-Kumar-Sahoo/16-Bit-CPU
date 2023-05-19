@@ -28,14 +28,14 @@
      <img width="500" alt="image" src="https://github.com/Mehul-Kumar-Sahoo/16-Bit-CPU/assets/93527557/5b5fc3b1-19f1-411a-af5c-fd39fd9c59a1">
 3) The next 10 bits represent the Address of the memory that is needed in the instruction. 
 
-## ALU Control Bits
+## ALU(CalC) Control Bits
 - Each control signal represents a basic operation in inputs as mentioned:
 
   <img width="400" alt="image" src="https://github.com/Mehul-Kumar-Sahoo/16-Bit-CPU/assets/93527557/acbef46d-83ab-44a6-9c2d-04954a3ed68f">
 - The control signals for various operations of the ALU are as follows:
 
   <img width="300" alt="image" src="https://github.com/Mehul-Kumar-Sahoo/16-Bit-CPU/assets/93527557/c2086dfa-f085-4c7f-a7fb-0254ce07eaf7">
-[The explanation for the control bits is given here.](https://github.com/Mehul-Kumar-Sahoo/16-Bit-CPU/blob/main/Control_Bits_CalC.pdf)
+- [The explanation for the control bits of ALU is given here.](https://github.com/Mehul-Kumar-Sahoo/16-Bit-CPU/blob/main/Control_Bits_CalC.pdf)
 
 ## Input and Output
 
