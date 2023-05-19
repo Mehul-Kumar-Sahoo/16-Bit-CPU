@@ -35,6 +35,7 @@
 - The control signals for various operations of the ALU are as follows:
 
   <img width="300" alt="image" src="https://github.com/Mehul-Kumar-Sahoo/16-Bit-CPU/assets/93527557/c2086dfa-f085-4c7f-a7fb-0254ce07eaf7">
+[The explanation for the control bits is given here.](https://github.com/Mehul-Kumar-Sahoo/16-Bit-CPU/blob/main/Control_Bits_CalC.pdf)
 
 ## Input and Output
 
