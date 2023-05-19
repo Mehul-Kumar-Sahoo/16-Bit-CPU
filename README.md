@@ -36,3 +36,7 @@
 
   <img width="300" alt="image" src="https://github.com/Mehul-Kumar-Sahoo/16-Bit-CPU/assets/93527557/c2086dfa-f085-4c7f-a7fb-0254ce07eaf7">
 
+## Input and Output
+
+- The Instructions are given in the file Program.txt and the Data is given in the file Data.txt. As soon as we run the CPU_tb.v file the instructions and data are loaded into their respective segments of memory.
+- The output is written in the file Memory_output.txt.
