@@ -1,5 +1,7 @@
 # 16 Bit CPU
 
+Skills: Verilog HDL, Computer Architechture
+
 - I am Mehul Kumar Sahoo pursuing Electronics Engineering at IIT (BHU), Varanasi.
 - I have made a 16-bit CPU using Verilog HDL as a solution of the problem statement in event ICHIP of UDYAM'23.
 - The verilog files along with testbench are attached in this repository.
