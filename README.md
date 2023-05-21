@@ -6,7 +6,7 @@ Skills: Verilog HDL, Computer Architechture
 - I have made a 16-bit CPU using Verilog HDL as a solution of the problem statement in event ICHIP of UDYAM'23.
 - The verilog files along with testbench are attached in this repository.
 
-     <img width="943" alt="image" src="https://github.com/Mehul-Kumar-Sahoo/16-Bit-CPU/assets/93527557/adb940e1-af67-44e0-92c6-46ee77fef546">
+    <img width="1543" alt="image" src="https://github.com/Mehul-Kumar-Sahoo/16-Bit-CPU/assets/93527557/e7fe1fd3-3709-4929-937b-acb9d1905163">
 
 ## CPU Design
 
