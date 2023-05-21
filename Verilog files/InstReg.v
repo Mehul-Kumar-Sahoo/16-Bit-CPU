@@ -27,7 +27,7 @@ module InstReg(addr_mode,opcode,address,clk,ins);
     output reg [4:0] opcode;
     output reg [9:0] address;
 
-    always @(clk==1'b1) begin
+    always @(posedge clk) begin
         addr_mode <= ins[15];
         opcode <= ins[14:10];
         address <= ins[9:0];
