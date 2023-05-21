@@ -58,9 +58,8 @@ module CPU_tb;
 
     initial begin
         // Writing output to file
-        #300
+        #310
         $writememh("C:/Users/sahoo/OneDrive/Documents/PROJECTS/16_BIT_CPU_Verilog/Memory_Output.txt",memory,401,430);
-        $finish;
     end
 
 endmodule
