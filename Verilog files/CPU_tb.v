@@ -24,10 +24,10 @@ module CPU_tb;
     reg clk,rst_pc,rst_acc;
     wire wr,addr_mode;
     wire [9:0] addr;
-    wire [15:0] data_in,data_out,alu_out;
+    wire [15:0] data_in,data_out;
 
     // Instantiating the CPU and Memory module
-    CPU c0(data_out,addr,wr,addr_mode,data_in,clk,rst_pc,rst_acc,alu_out);
+    CPU c0(data_out,addr,wr,addr_mode,data_in,clk,rst_pc,rst_acc);
     Memory m0(data_in,data_out,addr,addr_mode,wr);
 
     initial begin
