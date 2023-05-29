@@ -27,23 +27,21 @@ module CPU(data_out,addr,wr,addr_mode,data_in,clk,rst_pc,rst_acc);
     output [9:0] addr;
     output [15:0] data_out;
 
-    wire pc_hold,load_acc,zx,nx,zy,ny,f,no,load_mem,zr,ng,mode,acc_load,zr_acc,ng_acc;
+    wire pc_hold,load_acc,load_mem,zr,ng,mode,acc_load,zr_acc,ng_acc,zx,nx,zy,ny,f,no;
     wire [4:0] opcode;
     wire [9:0] addr_data,addr_ins;
-    wire [15:0] acc_in,alu_out,acc_out;
+    wire [15:0] acc_in,acc_out,alu_out;
 
     // Instantiating the modules
     PC a0(addr_ins,clk,rst_pc,pc_hold);
     InstReg a1(mode,opcode,addr_data,clk,data_in);
-    Accumulator a2(acc_out,acc_in,acc_load,rst_acc);
+    Accumulator a2(acc_out,acc_in,load_acc,rst_acc);
     CalC a3(alu_out,zr,ng,acc_out,data_in,zx,nx,zy,ny,f,no);
-    Control_Unit a4(zx,nx,zy,ny,f,no,load_acc,load_mem,pc_hold,opcode,zr_acc,ng_acc,clk);
+    Control_Unit a4(zx,nx,zy,ny,f,no,load_acc,wr,pc_hold,opcode,zr_acc,ng_acc,clk);
 
     assign addr = clk ? addr_data : addr_ins;
     assign acc_in = (opcode==5'b10010) ? data_in : alu_out;
-    assign wr = load_mem;
     assign data_out = acc_out;
-    assign acc_load = clk & load_acc;
     assign addr_mode = clk & mode;
     assign zr_acc = (acc_out==15'b0);
     assign ng_acc = (acc_out[15]);
