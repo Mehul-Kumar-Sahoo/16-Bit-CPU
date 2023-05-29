@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Mehul Kumar Sahoo
 // 
 // Create Date: 17.05.2023 08:25:20
 // Design Name: 
@@ -24,10 +24,10 @@ module CPU_tb;
     reg clk,rst_pc,rst_acc;
     wire wr,addr_mode;
     wire [9:0] addr;
-    wire [15:0] data_in,data_out;
+    wire [15:0] data_in,data_out,alu_out;
 
     // Instantiating the CPU and Memory module
-    CPU c0(data_out,addr,wr,addr_mode,data_in,clk,rst_pc,rst_acc);
+    CPU c0(data_out,addr,wr,addr_mode,data_in,clk,rst_pc,rst_acc,alu_out);
     Memory m0(data_in,data_out,addr,addr_mode,wr);
 
     initial begin
