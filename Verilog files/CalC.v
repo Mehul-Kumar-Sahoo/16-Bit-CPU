@@ -29,8 +29,8 @@ module CalC(o,zr,ng,x,y,zx,nx,zy,ny,f,no);
     wire [15:0] X,Y;
 
     // Assigning the values of X and Y
-    assign X = ((~zx)&(~nx))?x:((~zx)&nx)?(~x):(zx&(~nx))?8'b0:(~8'b0);
-    assign Y = ((~zy)&(~ny))?y:((~zy)&ny)?(~y):(zy&(~ny))?8'b0:(~8'b0);
+    assign X = ((~zx)&(~nx))?x:((~zx)&nx)?(~x):(zx&(~nx))?16'b0:(~16'b0);
+    assign Y = ((~zy)&(~ny))?y:((~zy)&ny)?(~y):(zy&(~ny))?16'b0:(~16'b0);
 
     // Assigning the final output
     assign o = ((~f)&(~no))?(X&Y):((~f)&no)?(~(X&Y)):(f&(~no))?(X+Y):(~(X+Y));
