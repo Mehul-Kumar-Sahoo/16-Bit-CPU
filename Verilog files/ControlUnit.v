@@ -20,15 +20,15 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Control_Unit(zx,nx,zy,ny,f,no,load_acc,load_mem,pc_hold,opcode,zr,ng,clk);
+module Control_Unit(zx,nx,zy,ny,f,no,load_acc,load_mem,pc_load,opcode,zr,ng,clk);
     input zr,ng,clk;
     input [4:0] opcode;
-    output reg zx,nx,zy,ny,f,no,load_acc,load_mem,pc_hold;
+    output reg zx,nx,zy,ny,f,no,load_acc,load_mem,pc_load;
 
     // Opcode execution
     always @(*) begin
         if(clk==1'b1) begin
-            load_acc=1'b0; load_mem=1'b0;
+            load_acc=1'b0; load_mem=1'b0; pc_load=1'b0;
             case(opcode)
                 5'b00000:begin zx=1; nx=0; zy=1; ny=0; f=1; no=0; end
                 5'b00001:begin zx=1; nx=1; zy=1; ny=1; f=1; no=1; end
@@ -50,12 +50,12 @@ module Control_Unit(zx,nx,zy,ny,f,no,load_acc,load_mem,pc_hold,opcode,zr,ng,clk)
                 5'b10001:begin zx=0; nx=1; zy=0; ny=1; f=0; no=1; end
                 5'b10010:begin zx=1; nx=0; zy=1; ny=0; f=1; no=0; end
                 5'b10011:begin zx=1; nx=0; zy=1; ny=0; f=1; no=0; load_mem=1'b1; end
-                5'b10100:pc_hold=1;
-                5'b10101:if(zr) pc_hold=1;
-                5'b10110:if(ng) pc_hold=1;
+                5'b10100:pc_load=1'b1;
+                5'b10101:if(zr) pc_load=1'b1;
+                5'b10110:if(ng) pc_load=1'b1;
                 5'b10111: $finish;
             endcase
         end
-        else if(clk==1'b0) load_acc=1; pc_hold=1'b0;
+        else if(clk==1'b0) load_acc=(opcode<=5'b10010);
     end
 endmodule
