@@ -9,6 +9,9 @@ Skills: Verilog HDL, Computer Architechture
     <img width="944" alt="image" src="https://github.com/Mehul-Kumar-Sahoo/16-Bit-CPU/assets/93527557/581f0bfe-0f1c-4b72-a149-c1e38a766155">
 
 ## CPU Design
+- The block diagram of the CPU is as follows -
+  
+    <img width="738" alt="image" src="https://github.com/Mehul-Kumar-Sahoo/16-Bit-CPU/assets/93527557/c2af725f-c487-4cfe-b0bc-403cfad9e645">
 
 - The microprocessor follows Von Neuman Architechture and is an accumulator based processor (The output of ALU is always stored in the accumulator).
 - The CPU will use an 2KB (1k X 16) main memory.
